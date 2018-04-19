@@ -22,11 +22,11 @@ int main() {
 	int choice;
 
 	printf("Geometry Calculator\n");
-	printf("\n\t1. Calculate the Area of a Circle\n");
-	printf("\t2. Calculate the Area of a Rectangle\n");
-	printf("\t3. Calculate the Area of a Triangle\n");
-	printf("\t4. Quit\n");
-	printf("\nEnter your choice (1-4): ");
+	printf("\n1. Calculate the Area of a Circle\n");
+	printf("2. Calculate the Area of a Rectangle\n");
+	printf("3. Calculate the Area of a Triangle\n");
+	printf("4. Quit\n");
+	printf("Enter your choice (1-4): ");
 	fflush(stdout);
 	scanf("%d", &choice);
 
@@ -36,7 +36,7 @@ int main() {
 		fflush(stdout);
 		scanf("%lf", &radius);
 		areaDouble = areaCircle(radius);
-		printf("\nThe area is %.2f", areaDouble);
+		printf("\nThe area is %.2f\n", areaDouble);
 		break;
 	case 2:
 		printf("Please enter the length: ");
@@ -46,7 +46,7 @@ int main() {
 		fflush(stdout);
 		scanf("%d", &width);
 		areaInt = areaRectangle(length, width);
-		printf("\nThe area is %d", areaInt);
+		printf("\nThe area is %d\n", areaInt);
 		break;
 	case 3:
 		printf("Please enter the base: ");
@@ -56,9 +56,10 @@ int main() {
 		fflush(stdout);
 		scanf("%lf", &height);
 		areaDouble = areaTriangle(base, height);
-		printf("\nThe area is %.2f", areaDouble);
+		printf("\nThe area is %.2f\n", areaDouble);
 		break;
 	default:
+		printf("Exitting program...");
 		break;
 	}
 
