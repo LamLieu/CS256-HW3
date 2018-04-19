@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	double newPopulation, oldPopulation = 0, birthRate = 0, deathRate = 0, numOfYears = 0;
+	double newPopulation, oldPopulation = 0, birthRate = -1, deathRate = -1, numOfYears = 0;
 
 	while(oldPopulation < 2) {
 		printf("Enter the starting population size: ");
@@ -21,7 +21,6 @@ int main() {
 		scanf("%lf", &deathRate);
 	}
 
-	printf("Enter the number of years to display: ");
 	while (numOfYears < 1) {
 		printf("Enter the number of years to display: ");
 		fflush(stdout);
@@ -29,5 +28,6 @@ int main() {
 	}
 
 	newPopulation = oldPopulation + (birthRate * oldPopulation) - (deathRate * oldPopulation);
+	printf("The new population is: %.0lf", newPopulation);
 	return 0;
 }
