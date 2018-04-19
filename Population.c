@@ -1,4 +1,3 @@
-/*
 #include <stdio.h>
 
 int main() {
@@ -6,26 +5,29 @@ int main() {
 
 	while(oldPopulation < 2) {
 		printf("Enter the starting population size: ");
+		fflush(stdout);
 		scanf("%lf", &oldPopulation);
 	}
 
 	while (birthRate < 0) {
 		printf("Enter the annual birth rate: ");
+		fflush(stdout);
 		scanf("%lf", &birthRate);
 	}
 
 	while (deathRate < 0) {
 		printf("Enter the annual death rate: ");
+		fflush(stdout);
 		scanf("%lf", &deathRate);
 	}
 
 	printf("Enter the number of years to display: ");
 	while (numOfYears < 1) {
 		printf("Enter the number of years to display: ");
+		fflush(stdout);
 		scanf("%lf", &numOfYears);
 	}
 
 	newPopulation = oldPopulation + (birthRate * oldPopulation) - (deathRate * oldPopulation);
 	return 0;
 }
-*/
