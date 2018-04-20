@@ -2,13 +2,15 @@
 
 int * ReverseArray(int *array, int *newArray, int arraySize);
 
-int * ReverseArray(int *array, int *newArray, int arraySize) {
+int * ReverseArray(int *arrayptr, int *newArrayptr, int arraySize) {
 	for (int oldIndex = 0; oldIndex < arraySize; oldIndex++) {
 		int newIndex = arraySize - 1;
-		*(newArray + newIndex) = *(array + oldIndex);
+		int arrayContent = *(arrayptr + oldIndex);
+		*(newArrayptr + newIndex) = arrayContent;
+		newIndex--;
 	}
 
-	return newArray;
+	return newArrayptr;
 }
 
 int main() {
@@ -27,7 +29,7 @@ int main() {
 		scanf("%d", &array[i]);
 	}
 
-	int *newArrayPTR = ReverseArray(&array, &newArray, arraySize);
-	printf("%d, %d, %d, %d, %d", newArray[0], newArray[1], newArray[2], newArray[3], newArray[4]);
+	int *newArrayPTR = ReverseArray(&array[0], &newArray[0], arraySize);
+
 	return 0;
 }
